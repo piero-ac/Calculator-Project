@@ -1,3 +1,5 @@
+/* https://colorhunt.co/palette/f0ebe3e4dccf7d9d9c576f72 */
+
 *,
 *::before,
 *::after {
@@ -13,26 +15,39 @@ html {
 body {
     font-size: 1rem;
     min-height: 100vh;
+    background-color: rgb(240, 235, 227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calculator {
     height: 600px;
     width: 400px;
-    background-color: black;
+    background-color: rgb(87, 111, 114);
     border-radius: 5px;
     padding: 20px 10px; 
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
 .display {
-    background-color: grey;
+    background-color: rgb(240, 235, 227);
     margin-bottom: 10px;
     height: 7rem;
     padding: 5px;
     font-size: 6.5rem;
     border-radius: 5px;
+    border: 2px inset rgb(125, 157, 156);
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
 }
 
 .display p {
     width: 100%;
     text-align: right;
 }
+
