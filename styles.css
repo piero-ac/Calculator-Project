@@ -91,3 +91,7 @@ body {
     background-color: rgb(228, 220, 207);
 }
 
+
+.button-border {
+    border: 0.5rem outset rgb(125, 157, 156);
+}
