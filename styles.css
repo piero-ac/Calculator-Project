@@ -95,6 +95,13 @@ body {
     background-color: rgb(239, 190, 125);
 }
 
+.AC-button {
+    background-color: rgb(204, 45, 13);
+}
+
+.CE-button {
+    background-color: rgb(239, 106, 106);
+}
 
 .button-border {
     border: 0.5rem outset rgb(125, 157, 156);
