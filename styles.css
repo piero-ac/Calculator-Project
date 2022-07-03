@@ -33,7 +33,7 @@ body {
     width: 40rem;
     background-color: rgb(87, 111, 114);
     border-radius: 0.5rem;
-    padding: 2rem 1rem; 
+    padding: 2rem 1.5rem; 
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     
 }
@@ -47,7 +47,7 @@ body {
     padding: 0.5rem;
     font-size: 6.5rem;
     border-radius: 0.5rem;
-    border: 0.2rem inset rgb(125, 157, 156);
+    border: 0.5rem inset rgb(125, 157, 156);
     
 }
 
@@ -72,7 +72,7 @@ body {
 .button-row {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
     width: 100%;
     height: auto;
