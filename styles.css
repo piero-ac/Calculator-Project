@@ -20,6 +20,7 @@ body {
     font-size: 1rem;
     min-height: 100vh;
     background-color: rgb(240, 235, 227);
+    min-width: 500px;
     
 }
 
@@ -28,11 +29,11 @@ body {
     flex-flow: column nowrap;
     justify-content: space-between;
 
-    height: 600px;
-    width: 400px;
+    height: 60rem;
+    width: 40rem;
     background-color: rgb(87, 111, 114);
-    border-radius: 5px;
-    padding: 20px 10px; 
+    border-radius: 0.5rem;
+    padding: 2rem 1rem; 
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     
 }
@@ -43,10 +44,10 @@ body {
 
     background-color: rgb(240, 235, 227);
     height: 7rem;
-    padding: 5px;
+    padding: 0.5rem;
     font-size: 6.5rem;
-    border-radius: 5px;
-    border: 2px inset rgb(125, 157, 156);
+    border-radius: 0.5rem;
+    border: 0.2rem inset rgb(125, 157, 156);
     
 }
 
@@ -63,7 +64,7 @@ body {
 
     height: 50rem;
     width: 100%;
-    padding: 5px;
+    padding: 0.5rem;
     
     
 }
@@ -84,5 +85,9 @@ body {
     width: 8rem;
     height: 8rem;
     font-size: 4rem;
+}
+
+.number-button {
+    background-color: rgb(228, 220, 207);
 }
 
