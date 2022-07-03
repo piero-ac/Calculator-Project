@@ -18,6 +18,7 @@ body {
     align-items: center;
 
     font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
     min-height: 100vh;
     background-color: rgb(240, 235, 227);
     min-width: 500px;
@@ -87,6 +88,10 @@ body {
     font-size: 4rem;
 }
 
+button:active {
+    border: 0.5rem inset rgb(125, 157, 156);
+}
+
 .number-button {
     background-color: rgb(228, 220, 207);
 }
@@ -106,3 +111,4 @@ body {
 .button-border {
     border: 0.5rem outset rgb(125, 157, 156);
 }
+
