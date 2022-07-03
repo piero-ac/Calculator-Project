@@ -91,6 +91,10 @@ body {
     background-color: rgb(228, 220, 207);
 }
 
+.operand-button {
+    background-color: rgb(239, 190, 125);
+}
+
 
 .button-border {
     border: 0.5rem outset rgb(125, 157, 156);
