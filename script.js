@@ -1,3 +1,4 @@
+const display = document.querySelector(".display p");
 const numberButtons = [...document.querySelectorAll(".number-button")];
 const operatorButtons = [...document.querySelectorAll(".operator-button")];
 const clearAllButton = document.querySelector(".AC-button");
