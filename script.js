@@ -6,7 +6,12 @@ const clearEntryButton = document.querySelector(".CE-button");
 
 const operands = [];
 
-clearAllButton.addEventListener("click", () => console.log("clear all"));
+clearAllButton.addEventListener("click", () => {
+  operands.splice(0, operands.length);
+  display.textContent = "1";
+  console.log("clear all");
+});
+
 clearEntryButton.addEventListener("click", () => console.log("clear entry"));
 
 numberButtons.forEach((numberButton) =>
