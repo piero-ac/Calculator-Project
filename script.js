@@ -8,8 +8,8 @@ const operands = [];
 
 clearAllButton.addEventListener("click", () => {
   operands.splice(0, operands.length);
-  display.textContent = "1";
-  console.log("clear all");
+  display.textContent = "0";
+  //console.log("clear all");
 });
 
 clearEntryButton.addEventListener("click", () => console.log("clear entry"));
