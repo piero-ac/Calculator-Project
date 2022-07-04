@@ -27,7 +27,30 @@ numberButtons.forEach((numberButton) =>
 );
 
 operatorButtons.forEach((operatorButton) =>
-  operatorButton.addEventListener("click", (event) =>
-    console.log(event.target.value)
-  )
+  operatorButton.addEventListener("click", (event) => {
+    const operator = event.target.value;
+
+    // don't do anything with the operator if
+    // if user has entered a number first
+    if (input != "") {
+      switch (operator) {
+        case "+/-":
+          input = input.includes("-") ? input.substring(1) : "-" + input;
+          break;
+        case "/":
+        case "*":
+        case "-":
+        case "+":
+          operands.push(input);
+          operands.push(operator);
+          display.textContent = "0";
+          input = "";
+          break;
+        case "=":
+          operate();
+          break;
+      }
+    }
+    //console.log(event.target.value);
+  })
 );
