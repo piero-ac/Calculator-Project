@@ -4,8 +4,7 @@ const operatorButtons = [...document.querySelectorAll(".operator-button")];
 const clearAllButton = document.querySelector(".AC-button");
 const clearEntryButton = document.querySelector(".CE-button");
 
-const operands = [];
-const operators = [];
+const operandsAndOperators = [];
 let input = "";
 
 clearAllButton.addEventListener("click", clearAll);
@@ -17,39 +16,11 @@ numberButtons.forEach((numberButton) =>
 );
 
 operatorButtons.forEach((operatorButton) =>
-  operatorButton.addEventListener("click", calculate)
+  operatorButton.addEventListener("click", operate)
 );
 
-// function operate() {
-//   let total = 0;
-//   const firstOperand = Number(operands.shift());
-//   const secondOperand = Number(operands.shift());
-//   const operator = operators.shift();
-
-//   switch (operator) {
-//     case "+":
-//       total = firstOperand + secondOperand;
-//       break;
-//     case "-":
-//       total = firstOperand - secondOperand;
-//       break;
-//     case "/":
-//       total = firstOperand / secondOperand;
-//       break;
-//     case "*":
-//       total = firstOperand * secondOperand;
-//       break;
-//     case "=":
-//       operators.splice(0, operators.length);
-//   }
-
-//   operands.unshift(total);
-//   return total;
-// }
-
 function clearAll() {
-  operands.splice(0, operands.length); // empty the operands array
-  operators.splice(0, operators.length); // empty the operators array
+  operandsAndOperators.splice(0, operandsAndOperators.length); // empty the array
   display.textContent = "0";
   input = "";
   // console.log("clear all")
@@ -60,31 +31,14 @@ function updateInput(event) {
     input += event.target.value;
     updateDisplay(input);
   }
+  console.log(input);
 }
 
 function updateDisplay(newNumber) {
   display.textContent = newNumber;
 }
 
-function calculate(event) {
-  const operator = event.target.value;
-  if (input === "") return;
+function operate(event) {}
 
-  switch (operator) {
-    case "+/-":
-      input = input.includes("-") ? input.substring(1) : "-" + input;
-      updateDisplay(input);
-      break;
-    case "/":
-    case "*":
-    case "-":
-    case "+":
-      operands.push(input);
-      operators.push(operator);
-      operate();
-      break;
-    case "=":
-      operate();
-      break;
-  }
-}
+// Operate Helper Function
+function operateHelper(operator) {}
