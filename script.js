@@ -8,13 +8,7 @@ const operands = [];
 const operators = [];
 let input = "";
 
-clearAllButton.addEventListener("click", () => {
-  operands.splice(0, operands.length);
-  operators.splice(0, operators.length);
-  display.textContent = "0";
-  input = "";
-  //console.log("clear all");
-});
+clearAllButton.addEventListener("click", clearAll);
 
 clearEntryButton.addEventListener("click", () => console.log("clear entry"));
 
@@ -101,3 +95,11 @@ operatorButtons.forEach((operatorButton) =>
 //   operands.unshift(total);
 //   return total;
 // }
+
+function clearAll() {
+  operands.splice(0, operands.length); // empty the operands array
+  operators.splice(0, operators.length); // empty the operators array
+  display.textContent = "0";
+  input = "";
+  // console.log("clear all")
+}
