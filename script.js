@@ -13,13 +13,7 @@ clearAllButton.addEventListener("click", clearAll);
 clearEntryButton.addEventListener("click", () => console.log("clear entry"));
 
 numberButtons.forEach((numberButton) =>
-  numberButton.addEventListener("click", (event) => {
-    if (input.length <= 8) {
-      input += event.target.value;
-      display.textContent = input;
-    }
-    //console.log(event.target.value)
-  })
+  numberButton.addEventListener("click", updateInput)
 );
 
 operatorButtons.forEach((operatorButton) =>
@@ -102,4 +96,15 @@ function clearAll() {
   display.textContent = "0";
   input = "";
   // console.log("clear all")
+}
+
+function updateInput(event) {
+  if (input.length <= 8) {
+    input += event.target.value;
+    updateDisplay(input);
+  }
+}
+
+function updateDisplay(newNumber) {
+  display.textContent = newNumber;
 }
