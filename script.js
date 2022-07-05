@@ -17,50 +17,7 @@ numberButtons.forEach((numberButton) =>
 );
 
 operatorButtons.forEach((operatorButton) =>
-  operatorButton.addEventListener("click", (event) => {
-    const operator = event.target.value;
-
-    // don't do anything with the operator if
-    // if user has entered a number first
-    //   if (input != "") {
-    //     switch (operator) {
-    //       case "+/-":
-    //         input = input.includes("-") ? input.substring(1) : "-" + input;
-    //         display.textContent = input;
-    //         break;
-    //       case "/":
-    //       case "*":
-    //       case "-":
-    //       case "+":
-    //         if (operands.length != 0) {
-    //           operands.push(input);
-    //           display.textContent = operate();
-    //           operators.push(operator);
-    //         } else {
-    //           operands.push(input);
-    //           operators.push(operator);
-    //           display.textContent = "0";
-    //         }
-    //         // operands.push(input);
-    //         // operands.push(operator);
-    //         // display.textContent = "0";
-    //         // input = "";
-    //         input = "";
-
-    //         console.table(operands);
-    //         console.table(operators);
-    //         break;
-
-    //       case "=":
-    //         operands.push(input);
-    //         display.textContent = operate();
-    //         console.table(operands);
-    //         console.table(operators);
-    //         break;
-    //     }
-    //   }
-    //   //console.log(event.target.value);
-  })
+  operatorButton.addEventListener("click", calculate)
 );
 
 // function operate() {
@@ -107,4 +64,27 @@ function updateInput(event) {
 
 function updateDisplay(newNumber) {
   display.textContent = newNumber;
+}
+
+function calculate(event) {
+  const operator = event.target.value;
+  if (input === "") return;
+
+  switch (operator) {
+    case "+/-":
+      input = input.includes("-") ? input.substring(1) : "-" + input;
+      updateDisplay(input);
+      break;
+    case "/":
+    case "*":
+    case "-":
+    case "+":
+      operands.push(input);
+      operators.push(operator);
+      operate();
+      break;
+    case "=":
+      operate();
+      break;
+  }
 }
